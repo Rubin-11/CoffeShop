@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->timestamps();
 
             $table->foreign('order_id')->references('id')->on('orders'); // Связь с заказом
-            $table->foreign('product_if')->references('id')->on('products'); // Связь с продуктом
+            $table->foreign('product_id')->references('id')->on('products'); // Связь с продуктом
         });
     }
 
