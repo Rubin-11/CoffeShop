@@ -1,3 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "normalize.css";
+@import "components/header.css";
+@import "variables.css";
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 300;
+    font-style: auto;
+    src: url(../font/Gilroy/Gilroy-Light.otf);
+}
+@font-face {
+    font-family: 'Gilroy';
+    font-weight: 800;
+    font-style: auto;
+    src: url(../font/Gilroy/Gilroy-ExtraBold.otf);
+}
+
+.center {
+    padding-left: 122px;
+    padding-right: 122px;
+}
+
+.container {
+    padding-left: calc(50% - 1904px / 2);
+    padding-right: calc(50% - 1904px / 2);
+}
+
+
+h2 {
+
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-family: Gilroy, monospace;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+body {
+    /*gap: 1px;*/
+    /*  m*/
+}
+
+.container {
+
+}
+
+footer {
+
+}
+
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/

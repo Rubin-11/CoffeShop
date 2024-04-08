@@ -1,0 +1,128 @@
+.footer {
+    padding-top: calc(100vh - 1115px);
+    overflow-x: clip;
+}
+
+.footer__subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__subscription__background {
+    background-image: url('../../images/footer/background.png');
+
+    background-size: cover;
+    height: 288px;
+    width: 1904px;
+    position: absolute;
+    z-index: -1;
+    overflow-x: hidden;
+}
+
+.footer__subscription__container {
+    display: flex;
+    width: 100%;
+}
+
+.footer__subscription__container__left__text {
+    width: 796px;
+}
+
+.footer__subscription__container__left__text h2 {
+    margin-top: 159px;
+}
+
+.footer__subscription__container__left__text p {
+    width: 761px;
+    margin-top: 54px;
+}
+
+.footer__subscription__container__left__form {
+    height: 80px;
+    position: relative;
+    margin-top: 58px;
+}
+
+.footer__subscription__container__left__form__input {
+    width: 780px;
+    height: 80px;
+    border-radius: 40px;
+    background: rgb(243, 243, 243);
+    padding-left: 60px;
+    padding-right: 260px;
+    color: rgb(201, 201, 201);
+    font-family: Gilroy, monospace;
+    font-size: 25px;
+    position: absolute;
+}
+
+.footer__subscription__container__left__form__input::placeholder {
+    position: relative;
+    color: rgb(201, 201, 201);
+    font-family: Gilroy, monospace;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.footer__subscription__container__left__form__button {
+    position: absolute;
+    border-radius: 40px;
+    background: rgb(249, 179, 0);
+    width: 260px;
+    height: 80px;
+    left: 840px;
+    color: rgb(255, 255, 255);
+    font-family: Gilroy, monospace;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.footer__subscription__container__left__description-form {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 189px
+}
+
+.footer__subscription__container__left__description-form a {
+    color: rgb(249, 179, 0)
+}
+
+/*footer__subscription__container__right*/
+
+.footer__subscription__container__right {
+    position: relative;
+    top: -173px;
+    right: -263px;
+    margin-bottom: 244px;
+}
+
+.footer__subscription__container__right__grains {
+    position: absolute;
+    z-index: -1;
+    width: 40rem;
+}
+
+.footer__subscription__container__right__cup {
+    position: relative;
+    right: -81px;
+    top: 99px;
+    width: 32rem;
+}
+
+.footer__menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__menu__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    padding: 0;
+}
