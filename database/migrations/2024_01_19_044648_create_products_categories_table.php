@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        // Продукты бренды
+        // Продукты категории
         Schema::create('products_categories', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id');
