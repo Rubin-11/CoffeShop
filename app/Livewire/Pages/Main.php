@@ -8,6 +8,7 @@ class Main extends Component
 {
     public function render()
     {
+//        dd("dsdsd");
         return view('livewire.pages.main');
     }
 }

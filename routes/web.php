@@ -12,8 +12,8 @@ use App\Livewire\Pages\TeaCatalog;
 use App\Livewire\Pages\VendingCatalog;
 use App\Livewire\Pages\PersonalAccount;
 
-Route::view('/', 'welcome');
 
+Route::view('/', 'welcome');
 Route::get('/main', Main::class);
 Route::get('/coffee_catalog', CoffeeCatalog::class);
 Route::get('/tea_catalog', TeaCatalog::class);
