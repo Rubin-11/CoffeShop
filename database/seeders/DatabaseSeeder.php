@@ -15,7 +15,14 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('products')->truncate();
         $this->call([
+            UserSeeder::class,
+            AddressSeeder::class,
             ProductSeeder::class,
+            BasketSeeder::class,
+            BasketItemSeeder::class,
+            OrderSeeder::class,
+            DeliverySeeder::class,
+            PaymentSeeder::class,
             BrandSeeder::class,
         ]);
 
