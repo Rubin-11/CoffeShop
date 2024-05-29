@@ -10,12 +10,12 @@ return new class extends Migration {
         // Заказы
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id'); // Заказчик
-            $table->string('order_number'); // Номер заказа
-            $table->decimal('total', 10, 2); // Общая сумма заказа
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->decimal('total', 10, 2);
+            $table->string('status');
+            $table->foreignId('address_id')->constrained()->onDelete('cascade');
+            $table->foreignId('delivery_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users'); // Связь с пользователем
         });
     }
 

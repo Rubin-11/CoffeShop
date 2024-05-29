@@ -24,4 +24,10 @@ class Product extends Model
     {
         return $this->hasOne(Category::class); // Один к одному
     }
+
+    public function basketItems()
+    {
+        return $this->hasMany(BasketItem::class);
+    }
 }
+

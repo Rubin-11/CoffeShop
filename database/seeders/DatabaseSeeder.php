@@ -2,26 +2,27 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
-use App\Livewire\Pages\TeaCatalog;
-use App\Livewire\Pages\VendingCatalog;
-use App\Models\CoffeeAcidity;
-use App\Models\CoffeeProcessingsMethod;
-use App\Models\MethodCoffeePreparation;
-use App\Models\ProductCoffeeAcidity;
-use App\Models\ProductMethodCoffeePreparation;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
+    /**
+     * Seed the application's database.
+     */
     public function run(): void
     {
         DB::table('products')->truncate();
         $this->call([
             CategorySeeder::class,
+            UserSeeder::class,
+            AddressSeeder::class,
             ProductSeeder::class,
+            BasketSeeder::class,
+            BasketItemSeeder::class,
+            OrderSeeder::class,
+            DeliverySeeder::class,
+            PaymentSeeder::class,
             CoffeeCountrySeeder::class,
             ProductCoffeeCountrySeeder::class,
             CoffeeRoastLevelSeeder::class,
@@ -43,5 +44,6 @@ class DatabaseSeeder extends Seeder
             HealthyFoodCategorySeeder::class,
             ProductHealthyFoodCategorySeeder::class,
         ]);
+
     }
 }
