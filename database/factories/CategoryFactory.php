@@ -3,14 +3,14 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\ProductBrand;
+use App\Models\Category;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProductBrand>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Category>
  */
-class ProductBrandFactory extends Factory
+class CategoryFactory extends Factory
 {
-    protected $model = ProductBrand::class;
+    protected $model = Category::class;
     /**
      * Define the model's default state.
      *
