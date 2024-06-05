@@ -11,7 +11,7 @@
                 <form class="footer__subscription__container__left__form">
                     @csrf
                     <label>
-                        <input class="footer__subscription__container__left__form__input" name="email" type="email" placeholder="Ваш email">
+                        <input class="footer__subscription__container__left__form__input" name="email" type="email" placeholder="Ваш email" autocomplete="off">
                     </label>
                     <button class="footer__subscription__container__left__form__button" type="#">Подписаться</button>
                 </form>

@@ -13,8 +13,7 @@ use App\Livewire\Pages\VendingCatalog;
 use App\Livewire\Pages\PersonalAccount;
 
 
-Route::view('/', 'welcome');
-Route::get('/main', Main::class);
+Route::get('/', Main::class);
 Route::get('/coffee_catalog', CoffeeCatalog::class);
 Route::get('/tea_catalog', TeaCatalog::class);
 Route::get('/vending_catalog', VendingCatalog::class);
@@ -24,13 +23,5 @@ Route::get('/blog', Blog::class);
 Route::get('/basket', Basket::class);
 Route::get('/contacts', Contacts::class);
 Route::get('/personal_account', PersonalAccount::class);
-
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
 
 require __DIR__.'/auth.php';

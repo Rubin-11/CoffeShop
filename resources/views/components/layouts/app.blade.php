@@ -10,10 +10,6 @@
 <body>
 <div class="container center">
 <livewire:components.header/>
-
-{{--    @if (Route::has('login'))--}}
-{{--        <livewire:welcome.navigation />--}}
-{{--    @endif--}}
 {{ $slot }}
 <livewire:components.footer/>
 </div>
