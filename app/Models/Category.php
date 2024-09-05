@@ -16,8 +16,15 @@ class Category extends Model
         'name',
     ];
 
-    public function product(): BelongsTo
+   // Предполагаем, что внешний ключ в таблице categories называется product_id
+    public function product()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'product_id');
     }
+
+    // public function products()
+    // {
+    //     return $this->hasMany(Product::class, 'category_id');
+    // }
+    
 }

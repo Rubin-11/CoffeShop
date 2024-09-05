@@ -20,14 +20,20 @@ class Product extends Model
         'category_id',
     ];
 
-    public function category(): HasOne
+    // Предполагаем, что внешний ключ в таблице products называется category_id
+    public function category()
     {
-        return $this->hasOne(Category::class); // Один к одному
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function basketItems()
     {
         return $this->hasMany(BasketItem::class);
     }
-}
 
+    // В модели Product
+    public function coffeeRoastLevels()
+    {
+        return $this->hasMany(CoffeeRoastLevel::class );
+    }
+}
