@@ -16,8 +16,15 @@ class CoffeeRoastLevel extends Model
         'level',
     ];
 
-    public function productCoffeeRoastsLevels(): BelongsTo
+
+    public function products()
     {
-        return $this->belongsTo(ProductCoffeeRoastLevel::class);
+        return $this->belongsToMany(Product::class, 'product_id');
     }
+
+
+    // public function productCoffeeRoastsLevels(): BelongsTo
+    // {
+    //     return $this->belongsTo(ProductCoffeeRoastLevel::class);
+    // }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class ProductCoffeeRoastLevel extends Model
@@ -17,10 +18,12 @@ class ProductCoffeeRoastLevel extends Model
         'сoffee_roast_level_id'
     ];
 
-    public function products(): HasOne
-    {
-        return $this->hasOne(Product::class); // Один к одному
-    }
+    // В модели ProductCoffeeRoastLevel
+public function product()
+{
+    return $this->belongsTo(Product::class);
+}
+
 
     public function сoffeeRoastsLevels(): HasOne
     {
