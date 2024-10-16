@@ -25,34 +25,42 @@
         <div class="main_pages__container2__background_grains"></div>
         <h2 class="main_pages__container2__h2">Каталоги нашей продукции</h2>
         <div class="main_pages__container2__category_cards">
-            <div class="main_pages__container2__category_cards__block">
-                <img class="main_pages__container2__category_cards__block__img"
-                    src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/freshly-roasted-coffee.png') }}"
-                    alt="#">
-                <p class="main_pages__container2__category_cards__block__text">Свежеобжаренный кофе</p>
-                <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
-            </div>
-            <div class="main_pages__container2__category_cards__block">
-                <img class="main_pages__container2__category_cards__block__img"
-                    src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/tea-and-coffee-drinks.png') }}"
-                    alt="#">
-                <p class="main_pages__container2__category_cards__block__text">Чай и кофейные напитки</p>
-                <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
-            </div>
-            <div class="main_pages__container2__category_cards__block">
-                <img class="main_pages__container2__category_cards__block__img"
-                    src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/products-for-vending.png') }}"
-                    alt="#">
-                <p class="main_pages__container2__category_cards__block__text">Продукция для вендинга</p>
-                <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
-            </div>
-            <div class="main_pages__container2__category_cards__block">
-                <img class="main_pages__container2__category_cards__block__img"
-                    src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/healthy-eating.png') }}"
-                    alt="#">
-                <p class="main_pages__container2__category_cards__block__text">Здоровое питание</p>
-                <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
-            </div>
+            <a href="/coffee_catalog" wire:navigate>
+                <div class="main_pages__container2__category_cards__block">
+                    <img class="main_pages__container2__category_cards__block__img"
+                        src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/freshly-roasted-coffee.png') }}"
+                        alt="#">
+                    <p class="main_pages__container2__category_cards__block__text">Свежеобжаренный кофе</p>
+                    <a class="main_pages __container2__category_cards__block__buy" href="#">Купить</a>
+                </div>
+            </a>
+            <a href="/tea_catalog" wire:navigate>
+                <div class="main_pages__container2__category_cards__block">
+                    <img class="main_pages__container2__category_cards__block__img"
+                        src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/tea-and-coffee-drinks.png') }}"
+                        alt="#">
+                    <p class="main_pages__container2__category_cards__block__text">Чай и кофейные напитки</p>
+                    <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
+                </div>
+            </a>
+            <a href="/vending_catalog" wire:navigate>
+                <div class="main_pages__container2__category_cards__block">
+                    <img class="main_pages__container2__category_cards__block__img"
+                        src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/products-for-vending.png') }}"
+                        alt="#">
+                    <p class="main_pages__container2__category_cards__block__text">Продукция для вендинга</p>
+                    <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
+                </div>
+            </a>
+            <a href="/healthy_food_catalog" wire:navigate>
+                <div class="main_pages__container2__category_cards__block">
+                    <img class="main_pages__container2__category_cards__block__img"
+                        src="{{ Vite::asset('resources/images/pages/main/main_pages__container2__category_cards/healthy-eating.png') }}"
+                        alt="#">
+                    <p class="main_pages__container2__category_cards__block__text">Здоровое питание</p>
+                    <a class="main_pages__container2__category_cards__block__buy" href="#">Купить</a>
+                </div>
+            </a>
         </div>
     </section>
     <section class="main_pages__container3">
