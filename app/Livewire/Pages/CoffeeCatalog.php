@@ -3,24 +3,38 @@
 namespace App\Livewire\Pages;
 
 use App\Models\CoffeeRoastLevel;
+use App\Models\ProductCoffeeAcidity;
+use App\Models\CoffeeAcidity;
 use Livewire\Component;
 use App\Models\Product;
-use App\Models\ProductCoffeeRoastLevel;
-use Illuminate\Support\Facades\DB;
+use Request;
 
 class CoffeeCatalog extends Component
 {
-    public $products = [];
+    public $coffee = [];
+    public $coffeeAcidity = [];
+
+    public $selectedAcidity;
 
     public function mount()
     {
-        $products = Product::where('category_id', 1)->get(); // ID категории кофе
+        $this->coffee = Product::where('category_id', 1)->get();
+        $this->coffeeAcidity = CoffeeAcidity::all();
+        $this->selectedAcidity = null;
+    }
 
-        $this->products = $products;
+    public function sortCoffeeAcidity()
+    {
+        $this->coffee = Product::whereHas('productCoffeeAcidity', function ($query) {
+            $query->where('coffee_acidity_id', $this->selectedAcidity);
+        })->get();
     }
 
     public function render()
     {
-        return view('livewire.pages.coffee-catalog');
+        return view('livewire.pages.coffee-catalog')->with([
+            'coffees' => $this->coffee,
+            'levels' => $this->coffeeAcidity,
+        ]);
     }
 }
