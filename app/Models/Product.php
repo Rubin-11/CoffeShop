@@ -31,13 +31,19 @@ class Product extends Model
         return $this->hasMany(BasketItem::class);
     }
 
-    // В модели Product
+    
     public function coffeeRoastLevels(): HasMany
     {
         return $this->hasMany(CoffeeRoastLevel::class );
     }
+
     public function productCoffeeAcidity(): HasMany
     {
         return $this->hasMany(ProductCoffeeAcidity::class);
+    }
+
+    public function productCoffeeCountry(): HasMany
+    {
+        return $this->hasMany(ProductCoffeeCountry::class);
     }
 }
