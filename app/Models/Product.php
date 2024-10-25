@@ -46,4 +46,9 @@ class Product extends Model
     {
         return $this->hasMany(ProductCoffeeCountry::class);
     }
+
+    public function productCoffeeProcessingMethod(): HasMany
+    {
+        return $this->hasMany(ProductCoffeeProcessingMethod::class);
+    }
 }
