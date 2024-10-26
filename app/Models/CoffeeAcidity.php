@@ -15,9 +15,4 @@ class CoffeeAcidity extends Model
     protected $fillable = [
         'name'
     ];
-
-    public function productCoffeeAcidity(): BelongsTo
-    {
-        return $this->belongsTo(ProductCoffeeAcidity::class);
-    }
 }

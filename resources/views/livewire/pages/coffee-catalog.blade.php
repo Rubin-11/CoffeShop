@@ -28,14 +28,25 @@
             @endforeach
         </select>
         <button type="submit">Применить</button>
-    </form> 
+    </form>
 
     <form method="GET" wire:submit='getCoffeeProcessingMethods'>
         @csrf
         <label for="selectCoffeeProcessingMethods">Способ обработки:</label>
         <select wire:model='selectedCoffeeProcessingMethods' id="selectCoffeeProcessingMethods">
             @foreach ($processingMethods as $method)
-                <option value="{{$method->id}}">{{$method->name}}</option>
+                <option value="{{ $method->id }}">{{ $method->name }}</option>
+            @endforeach
+        </select>
+        <button type="submit">Применить</button>
+    </form>
+
+    <form method="GET" wire:submit='getSpecialCoffeeCategories'>
+        @csrf
+        <label for="selectSpecialCoffeeCategories">Особые</label>
+        <select wire:model="selectedSpecialCoffeeCategories" id="selectSpecialCoffeeCategories">
+            @foreach ($specialCoffeeCategories as $specialCoffeeCategory)
+                <option value="{{ $specialCoffeeCategory->id }}">{{ $specialCoffeeCategory->name }}</option>
             @endforeach
         </select>
         <button type="submit">Применить</button>

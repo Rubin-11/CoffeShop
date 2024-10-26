@@ -16,14 +16,4 @@ class ProductCoffeeCountry extends Model
         'product_id',
         'coffee_country_id'
     ];
-
-    public function products(): HasOne
-    {
-        return $this->hasOne(Product::class); // Один к одному
-    }
-
-    public function сoffeeRoastsLevels(): HasOne
-    {
-        return $this->hasOne(CoffeeCountry::class); // Один к одному
-    }
 }
