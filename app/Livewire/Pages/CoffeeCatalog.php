@@ -6,6 +6,7 @@ use App\Models\CoffeeAcidity;
 use App\Models\CoffeeCountry;
 use App\Models\CoffeeProcessingMethod;
 use App\Models\SpecialCoffeeCategory;
+use App\Models\TypeCoffee;
 use Livewire\Component;
 use App\Models\Product;
 
@@ -16,10 +17,13 @@ class CoffeeCatalog extends Component
     public $coffeeCountry = [];
     public $coffeeProcessingMethod = [];
     public $specialCoffeeCategory = [];
+    public $typesCoffee = [];
     public $selectedAcidity;
     public $selectedCountry;
     public $selectedCoffeeProcessingMethods;
     public $selectedSpecialCoffeeCategories;
+    public $selectedTypeCoffee;
+
 
 
     public function mount()
@@ -29,10 +33,13 @@ class CoffeeCatalog extends Component
         $this->coffeeCountry = CoffeeCountry::all();
         $this->coffeeProcessingMethod = CoffeeProcessingMethod::all();
         $this->specialCoffeeCategory = SpecialCoffeeCategory::all();
+        $this->typesCoffee = TypeCoffee::all();
         $this->selectedAcidity = 1;
         $this->selectedCountry = 1;
         $this->selectedCoffeeProcessingMethods = 1;
         $this->selectedSpecialCoffeeCategories = 1;
+        $this->selectedTypeCoffee = 1;
+
     }
 
     public function sortCoffeeAcidity()
@@ -63,6 +70,13 @@ class CoffeeCatalog extends Component
         })->get();
     }
 
+    public function getTypesCoffee()
+    {
+        $this->coffee = Product::whereHas('productTypeCoffee', function ($query) {
+            $query->where('type_coffee_id', $this->selectedTypeCoffee);
+        })->get();
+    }
+
     public function render()
     {
         return view('livewire.pages.coffee-catalog')->with([
@@ -71,6 +85,7 @@ class CoffeeCatalog extends Component
             'countris' => $this->coffeeCountry,
             'processingMethods' => $this->coffeeProcessingMethod,
             'specialCoffeeCategories' => $this->specialCoffeeCategory,
+            'typesCoffee' => $this->typesCoffee,
         ]);
     }
 }

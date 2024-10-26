@@ -56,4 +56,9 @@ class Product extends Model
     {
         return $this->hasMany(ProductSpecialCoffeeCategory::class);
     }
+
+    public function productTypeCoffee(): HasMany
+    {
+        return $this->hasMany(ProductTypeCoffee::class);
+    }
 }
