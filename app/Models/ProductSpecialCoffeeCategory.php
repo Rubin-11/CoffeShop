@@ -16,14 +16,4 @@ class ProductSpecialCoffeeCategory extends Model
         'product_id',
         'special_coffee_category_id'
     ];
-
-    public function products(): HasOne
-    {
-        return $this->hasOne(Product::class); // Один к одному
-    }
-
-    public function SpecialCoffeeCategory(): HasOne
-    {
-        return $this->hasOne(SpecialCoffeeCategory::class); // Один к одному
-    }
 }

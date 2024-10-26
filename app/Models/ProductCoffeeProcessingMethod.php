@@ -16,14 +16,4 @@ class ProductCoffeeProcessingMethod extends Model
         'product_id',
         'сoffee_processing_method_id',
     ];
-
-    public function products(): HasOne
-    {
-        return $this->hasOne(Product::class); // Один к одному
-    }
-
-    public function CoffeeProcessingsMethods(): HasOne
-    {
-        return $this->hasOne(CoffeeProcessingMethod::class); // Один к одному
-    }
 }

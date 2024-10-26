@@ -15,9 +15,4 @@ class SpecialCoffeeCategory extends Model
     protected $fillable = [
         'name',
     ];
-
-    public function productSpecialCoffeeCategory(): BelongsTo
-    {
-        return $this->belongsTo(ProductSpecialCoffeeCategory::class);
-    }
 }

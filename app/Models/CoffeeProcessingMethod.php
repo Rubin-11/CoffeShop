@@ -15,9 +15,4 @@ class CoffeeProcessingMethod extends Model
     protected $fillable = [
         'name'
     ];
-
-    public function productCoffeeProcessingsMethods(): BelongsTo
-    {
-        return $this->belongsTo(ProductCoffeeProcessingMethod::class);
-    }
 }
