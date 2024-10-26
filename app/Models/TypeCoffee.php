@@ -15,9 +15,4 @@ class TypeCoffee extends Model
     protected $fillable = [
         'name',
     ];
-
-    public function productTypesCoffee(): BelongsTo
-    {
-        return $this->belongsTo(ProductTypeCoffee::class);
-    }
 }

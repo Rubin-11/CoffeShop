@@ -16,14 +16,4 @@ class ProductTypeCoffee extends Model
         'product_id',
         'type_coffee_id'
     ];
-
-    public function products(): HasOne
-    {
-        return $this->hasOne(Product::class); // Один к одному
-    }
-
-    public function typesCoffee(): HasOne
-    {
-        return $this->hasOne(TypeCoffee::class); // Один к одному
-    }
 }
